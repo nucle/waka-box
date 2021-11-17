@@ -44,9 +44,11 @@ async function updateGist(stats) {
 
     lines.push(line.join(" "));
   }
-  console.log('LINES');
-  console.log(lines.length);
-  if (lines.length == 0) return;
+
+  if (lines.length == 0) {
+    console.info('No lines received from wakatime.')
+    return;
+  }
 
   try {
     // Get original filename to update that same file
