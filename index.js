@@ -44,7 +44,8 @@ async function updateGist(stats) {
 
     lines.push(line.join(" "));
   }
-
+  console.log('LINES');
+  console.log(lines.length);
   if (lines.length == 0) return;
 
   try {
